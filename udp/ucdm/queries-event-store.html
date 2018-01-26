@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>Event store queries</title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='../assets/base.css'>
+  </head>
+
+  <body>
+    <a name='top'></a>
+
+    <!-- Navigation -->
+    <div class="container">
+      <nav class="navbar is-transparent">
+        <div class="navbar-brand">
+          <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="../index.html">
+              Home
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link" href="../index.html">
+                UDP
+              </a>
+              <div class="navbar-dropdown is-boxed">
+                <a class="navbar-item" href="../udp/access-udp-resources.html">
+                  Accessing UDP resources
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item" href="../udp/caliper-endpoint.html">
+                  Caliper endpoint
+                </a>
+                <a class="navbar-item" href="../udp/event-processing.html">
+                  Event processing
+                </a>
+                <a class="navbar-item" href="../udp/lrs-event-record.html">
+                  Event record
+                </a>
+              </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link" href="../index.html">
+                UCDM
+              </a>
+              <div class="navbar-dropdown is-boxed">
+                <a class="navbar-item" href="../ucdm/data-dictionary.html">
+                  Data dictionary
+                </a>
+                <a class="navbar-item" href="../ucdm/relational-schema.html">
+                  Relational schema
+                </a>
+                <a class="navbar-item" href="../ucdm/canvas-to-ucdm.html">
+                  Canvas Data to UCDM
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item" href="../ucdm/queries-relational-store.html">
+                  Sample Relational Store queries
+                </a>
+                <a class="navbar-item" href="../ucdm/queries-event-store.html">
+                  Sample Learning Record Store queries
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="navbar-end">
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- /// Navigation -->
+
+    <!-- Section header -->
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title"><strong>Learning Record Store queries</strong></h1>
+          <h2 class="subtitle">Unizin Common Data Model</h2>
+        </div>
+      </div>
+    </section>
+    <!-- /// Section header -->
+
+    <div class="content">
+      <br>
+      <div class="container">
+
+        <h1>Overview</h1>
+        <p>
+          The following document provides some example starter queries for the UDP Learning Record Store of commonly-modeled data. It is intended only to provide some starter queries from which Members may work as they explore data in the Unizin Common Data Model.
+        </p>
+
+        <h1>Example queries</h1>
+        <p>
+          <strong>Count events by type and action</strong>
+          <pre>
+            SELECT
+              COUNT(*) c, event_type, event_action
+            FROM
+              learning_datasets.enriched_events
+            GROUP BY
+             event_type, event_action
+            ORDER BY c DESC
+            ;
+          </pre>
+        </p>
+
+        <p>
+          <strong>Find all of the "grade" events for a particular user</strong>
+          <pre>
+            SELECT
+              event
+            FROM
+              learning_datasets.enriched_events
+            WHERE
+              event_type = 'GradeEvent' AND
+              ucdm_actor_id = '1'
+          </pre>
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="content">
+          <p>
+            Questions about the documentation? <a href='mailto:udp@unizin.org'>Contact us</a>.<br>
+            Unizin Data Platform by <a href="http://unizin.org">Unizin, Ltd.</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ///Footer -->
+
+  </body>
+</html>

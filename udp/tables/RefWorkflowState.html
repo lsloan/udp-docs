@@ -1,0 +1,40 @@
+<!doctype html><html lang="en">  <head>   <title>refworkflowstate: definition</title>   <meta charset="utf-8">   <link rel='stylesheet' href='../assets/base.css'> </head><body><a name='top'></a><!-- Navigation --> <div class="container"> <nav class="navbar is-transparent"> <div class="navbar-brand"> <div class="navbar-burger burger" data-target="navbarExampleTransparentExample"> <span></span> <span></span> <span></span> </div> </div> <div id="navbarExampleTransparentExample" class="navbar-menu"> <div class="navbar-start"> <a class="navbar-item" href="../index.html"> Home </a> <div class="navbar-item has-dropdown is-hoverable"> <a class="navbar-link" href="../index.html"> UDP </a> <div class="navbar-dropdown is-boxed"> <a class="navbar-item" href="../udp/access-udp-resources.html"> Accessing UDP resources </a> <hr class="navbar-divider"> <a class="navbar-item" href="../udp/caliper-endpoint.html"> Caliper endpoint </a> <a class="navbar-item" href="../udp/event-processing.html"> Event processing </a> <a class="navbar-item" href="../udp/lrs-event-record.html"> Event record </a> </div> </div> <div class="navbar-item has-dropdown is-hoverable"> <a class="navbar-link" href="../index.html"> UCDM </a> <div class="navbar-dropdown is-boxed"> <a class="navbar-item" href="../ucdm/data-dictionary.html"> Data dictionary </a> <a class="navbar-item" href="../ucdm/relational-schema.html"> Relational schema </a> <a class="navbar-item" href="../ucdm/canvas-to-ucdm.html"> Canvas Data to UCDM </a> <hr class="navbar-divider"> <a class="navbar-item" href="../ucdm/queries-relational-store.html"> Sample Relational Store queries </a> <a class="navbar-item" href="../ucdm/queries-event-store.html"> Sample Learning Record Store queries </a> </div> </div> </div> <div class="navbar-end"> </div> </div> </nav> </div> <!-- /// Navigation --><section class="hero is-primary">  <div class="hero-body">    <div class="container">      <h1 class="title">        <b>refworkflowstate</b>       </h1>      <h2 class="subtitle">              </h2>    </div>  </div></section><div class="content"><br><div class="container"><b>Table definition</b><table class='table is-bordered is-hoverable'><thead><tr ><th>Name</th><th>Definition</th><th>Jursidiction</th></tr>
+</thead><tbody><tr ><td>refworkflowstateid</td><td>INTEGER</td><td>Common Educational Data Standards</td></tr>
+<tr ><td>description</td><td>CHARACTER VARYING (100)</td><td>Common Educational Data Standards</td></tr>
+<tr ><td>code</td><td>CHARACTER VARYING (50)</td><td>Common Educational Data Standards</td></tr>
+<tr ><td>definition</td><td>CHARACTER VARYING (4000)</td><td>Common Educational Data Standards</td></tr>
+<tr ><td>refjurisdictionid</td><td>INTEGER</td><td>Common Educational Data Standards</td></tr>
+<tr ><td>sortorder</td><td>NUMERIC</td><td>Common Educational Data Standards</td></tr>
+</tbody></table><b>Option set values</b><table class='table is-bordered is-hoverable'><thead><tr ><th>Code</th><th>Description</th><th>Definition</th><th>Jurisdiction</th></tr>
+</thead><tbody><tr ><td><code>Accepted</code></td><td>Accepted</td><td>Accepted</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Active</code></td><td>Active</td><td>Active</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Available</code></td><td>Available</td><td>Available</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Broken</code></td><td>Broken</td><td>Broken</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Claimed</code></td><td>Claimed</td><td>Claimed</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Completed</code></td><td>Completed</td><td>Completed</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Created</code></td><td>Created</td><td>Created</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>CreationPending</code></td><td>CreationPending</td><td>Creation is pending</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Deleted</code></td><td>Deleted</td><td>Deleted</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Errored</code></td><td>Errored</td><td>Errored</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Graded</code></td><td>Graded</td><td>Graded</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Hidden</code></td><td>Hidden</td><td>Hidden</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Inactive</code></td><td>Inactive</td><td>Inactive</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Invited</code></td><td>Invited</td><td>Invited</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Locked</code></td><td>Locked</td><td>Locked</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>PendingReview</code></td><td>PendingReview</td><td>Typically means that a completed learner activity or assessment has been completed by the student but not yet scored, graded, or reviewed.</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>PostDelayed</code></td><td>PostDelayed</td><td>Post is delayed</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Preregistered</code></td><td>Preregistered</td><td>Pre-registered</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Preview</code></td><td>Preview</td><td>Preview</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Published</code></td><td>Published</td><td>Published</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Registered</code></td><td>Registered</td><td>Registered</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Rejected</code></td><td>Rejected</td><td>Rejected</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Requested</code></td><td>Requested</td><td>Requested</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>SettingsOnly</code></td><td>SettingsOnly</td><td>SettingsOnly</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Started</code></td><td>Started</td><td>Started</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Submitted</code></td><td>Submitted</td><td>Submitted</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Unconfirmed</code></td><td>Unconfirmed</td><td>Unconfirmed</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Unlocked</code></td><td>Unlocked</td><td>Unlocked</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Unpublished</code></td><td>Unpublished</td><td>Unpublished</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Unsubmitted</code></td><td>Unsubmitted</td><td>Unsubmitted</td><td>Unizin Common Data Model</td></tr>
+<tr ><td><code>Untaken</code></td><td>Untaken</td><td>Typically means that an activity or assessment has been started but none of it is yet completed.</td><td>Unizin Common Data Model</td></tr>
+</tbody></table><br><br><br><br></div></div><!-- Footer --><footer class="footer"> <div class="container"> <div class="content"> <p> Questions about the documentation? <a href='mailto:udp@unizin.org'>Contact us</a>.<br> Unizin Data Platform by <a href="http://unizin.org">Unizin, Ltd.</a> </p> </div> </div></footer><!-- ///Footer --></body></html>

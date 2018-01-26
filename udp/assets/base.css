@@ -1,0 +1,71 @@
+@import "./bulma-0.6.2/css/bulma.css";
+@import 'https://fonts.googleapis.com/css?family=Oswald:400,300,700|Roboto:400,700,900,500,300,100|Roboto+Slab:400,300,700';
+
+html,
+body {
+    height: 100%;
+    font-family: Roboto;
+    background: white;
+}
+
+
+/* sticky footer (flexbox) */
+#root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+// this should be the very first div child of root
+#root div:nth-child(1) {
+    flex: 1;
+}
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+/* end sticky footer (flexbox) */
+
+a {
+    color: #0079CB;
+}
+
+.button {
+    padding: 5px 20px;
+}
+
+.button.is-primary {
+    background: #0079CB;
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.empty {
+    font-style: italic;
+}
+
+.force-wrap {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+/* Drag & Drop */
+body.dz-drag-hover #react-aria-modal-dialog main {
+    box-shadow: inset 0 0 20px #32D578;
+}
+/* End Drag & Drop */

@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Event processing</title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='../assets/base.css'>
+  </head>
+
+  <body>
+    <a name='top'></a>
+
+    <!-- Navigation -->
+    <div class="container">
+      <nav class="navbar is-transparent">
+        <div class="navbar-brand">
+          <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="../index.html">
+              Home
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link" href="../index.html">
+                UDP
+              </a>
+              <div class="navbar-dropdown is-boxed">
+                <a class="navbar-item" href="../udp/access-udp-resources.html">
+                  Accessing UDP resources
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item" href="../udp/caliper-endpoint.html">
+                  Caliper endpoint
+                </a>
+                <a class="navbar-item" href="../udp/event-processing.html">
+                  Event processing
+                </a>
+                <a class="navbar-item" href="../udp/lrs-event-record.html">
+                  Event record
+                </a>
+              </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link" href="../index.html">
+                UCDM
+              </a>
+              <div class="navbar-dropdown is-boxed">
+                <a class="navbar-item" href="../ucdm/data-dictionary.html">
+                  Data dictionary
+                </a>
+                <a class="navbar-item" href="../ucdm/relational-schema.html">
+                  Relational schema
+                </a>
+                <a class="navbar-item" href="../ucdm/canvas-to-ucdm.html">
+                  Canvas Data to UCDM
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item" href="../ucdm/queries-relational-store.html">
+                  Sample Relational Store queries
+                </a>
+                <a class="navbar-item" href="../ucdm/queries-event-store.html">
+                  Sample Learning Record Store queries
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="navbar-end">
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- /// Navigation -->
+
+    <!-- Section header -->
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title">Event processing</h2>
+          <h2 class="subtitle">UDP Caliper endpoint</h2>
+        </div>
+      </div>
+    </section>
+    <!-- /// Section header -->
+
+    <div class="content">
+      <br>
+      <div class="container">
+
+        <!-- Message routing -->
+        <h1>Overview</h1>
+        <a name='routing'></a>
+        <p>
+          The UDP processes events before they become event records in the UDP Learning Record Store.
+        </p>
+
+        <p>
+          The UDP Caliper endpoint triages events into processing streams based on the event's payload. If an event qualifies for particular processing, it is routed to that processing stream. In its response, the UDP caliper endpoint provides the signature(s) of the processing stream(s) to which an event was routed. Events may qualify for more than one processing streams.
+        </p>
+
+        <p>
+          The UDP currently supports two categories of event processing, each with one or more processing stream.
+        </p>
+
+        <h3>Event record processing</h3>
+        <p>
+          Event record processing streams create event records in the UDP Learning Record Store (LRS).
+        </p>
+
+        <h3>Reduced latency processing</h3>
+        <p>
+          Reduced latency processing streams use data in the event payload to update data in the UDP's relational store. The effect is to reduce the latency of data in the UDP relational store.
+        </p>
+
+        <p>
+          <strong>Key concepts:</strong>
+          <ul>
+            <li><strong>Event record</strong>. The record schema in the UDP Learning Record Store (<a href="../udp/lrs-event-record.html">see here</a>).</li>
+            <li><strong>Event processing stream</strong>. Defines a form of event computation that is applied for a particular purpose.</li>
+            <li><strong>Event processing stream signature</strong>. A unique string identifying an event processing stream.</li>
+            <li><strong>UCDM enrichment</strong>. The process of adding data to events such that they are aligned with the Unizin Common Data Model and the UDP relational store.</li>
+
+          </ul>
+        </p>
+
+        <a name='event-record-processing'></a>
+        <h1>1. Event record processing</h1>
+        <p>
+          Event record processing is divided into two tiers – Silver and Gold. Events may only be routed to one processing stream in one tier.
+        </p>
+
+        <h2>1.1 Silver tier processing</h2>
+
+        <p>
+          Silver tier processing represents a baseline of event record generation. In Silver tier processing, attributes required by the Caliper standard are extracted and stored in the event record (see below). The event record also includes the raw event payload. There is only one processing stream at the Silver tier.
+        </p>
+        <p>
+          Generally speaking, any valid Caliper event that does not qualify for a Gold tier event stream is routed to the Silver tier processing.
+        </p>
+
+        <h3>Attribute extraction</h3>
+
+        <p>
+          The following Caliper event attributes are extracted from an event and become part of the LRS event record.
+        </p>
+
+        <p>
+          <table class="table">
+            <tr>
+              <th width="300">Caliper attribute</th>
+              <th>Event record field</th>
+            </tr>
+            <tr>
+              <td><code>uuid</code></td>
+              <td><code>id</code></td>
+            </tr>
+            <tr>
+              <td><code>type</code></td>
+              <td><code>event_type</code></td>
+            </tr>
+            <tr>
+              <td><code>action</code></td>
+              <td><code>event_action</code></td>
+            </tr>
+            <tr>
+              <td>Event JSON</td>
+              <td><code>event</code></td>
+            </tr>
+          </table>
+        </p>
+
+        <h2>1.2 Gold tier processing</h2>
+        <p>
+          Gold tier processing streams extend Silver tier processing in two ways.
+        </p>
+
+        <p>
+          First, Gold tier processing streams extract optional Caliper event attributes and store them in the event record.
+        </p>
+
+        <p>
+          Second, Gold tier processing streams enrich both the event record and event payload with data that aligns the event to the UDP's relational store.
+        </p>
+
+        <p>
+          Gold tier processing streams are <em>tool specific</em>. The Caliper information model offers tool developers many ways to represent the same types of entities in an event. Consequently, Gold tier event processing streams must have knowledge of the particular way a tool models its entities.
+        </p>
+
+        <h3>Attribute extraction</h3>
+
+        <p>
+          Gold tier processing streams extract the following Caliper event attributes from an event to become part of the LRS event record. All event attributes extracted at the Silver tier are also extracted at the Gold tier.
+        </p>
+
+        <p>
+          <table class="table">
+            <tr>
+              <th style="width: 300px">Concept</th>
+              <th>Caliper Entity</th>
+              <th>Typical event attribute</th>
+              <th>Event record field</th>
+            </tr>
+            <tr>
+              <td>The unique identifier for the Learning Tool</td>
+              <td>SoftwareApplication</td>
+              <td><code>edApp</code></td>
+              <td><code>ed_app</code></td>
+            </tr>
+            <tr>
+              <td>Actor who performed the behavior</td>
+              <td>Actor</td>
+              <td><code>actor</code></td>
+              <td><code>event_actor_id</code></td>
+            </tr>
+            <tr>
+              <td>Course in which event occurred</td>
+              <td>CourseOffering</td>
+              <td>Varies by application</td>
+              <td><code>event_course_offering_id</code></td>
+            </tr>
+          </table>
+        </p>
+
+        <h3>UCDM enrichment</h3>
+
+        <p>
+          Gold tier processing streams align event data to the Unizin Common Data Model. They achieve alignment by enriching events and event records with object identifiers from the UDP  relational store that correspond to the identifiers for the same objects in the event payload.
+        </p>
+        <p>
+          In the LRS event record, UDP  relational store identifiers are prefixed with the string <code>ucdm_</code>.
+        </p>
+
+        <p>
+          When this event is routed to Gold tier processing, the common identifiers for the Learner and the Course offering in the UDP  relational store are retrieved. These identifiers are added to the Caliper event payload and also written to the Learning record store.
+        </p>
+
+        <p>
+          Aligning Caliper events with the UCDM and with your UDP  relational store allows event data to be joined with object data.
+        </p>
+
+        <p>
+          <h4>Event record enhancement</h4>
+        </p>
+
+        <p>
+          The following Caliper-to-UCDM Entity mappings are currently supported in Gold tier processing.
+        </p>
+
+        <p>
+          <table class="table">
+            <tr>
+              <th style='width: 300px'>Caliper Entity</th>
+              <th>UCDM Entity</th>
+              <th>Event record field</th>
+            </tr>
+            <tr>
+              <td>Actor</td>
+              <td>Person</td>
+              <td><code>ucdm_actor_id</code></td>
+            </tr>
+            <tr>
+              <td>CourseOffering</td>
+              <td>Course offering</td>
+              <td><code>ucdm_course_offering_id</code></td>
+            </tr>
+          </table>
+        </p>
+
+        <p>
+          <h4>Event JSON enrichment</h4>
+        </p>
+
+        <p>
+          Caliper events are enriched with UDP  relational store identifiers through the <code>extensions</code> node of the JSON event payload. For example, an enriched Canvas Live Event's <code>extensions</code> node will look like this after enrichment:
+        </p>
+
+        <blockquote>
+          <code>
+            "extensions": {<br>
+              "com.instructure.canvas": {<br>
+                "hostname": "",<br>
+                "request_id": "",<br>
+                "user_agent": "",<br>
+                "version": ""<br>
+              },<br>
+              "org.unizin.udp": {<br>
+                "ucdm_actor_id": "67890",<br>
+                "ucdm_course_offering_id": "12345"<br>
+              }<br>
+          </code>
+        </blockquote>
+
+
+
+
+        <!-- Reduced latency processing -->
+        <a name='reduced-latency-processing'></a>
+        <h1>2. Reduced latency processing</h1>
+        <p>
+          Reduced latency processing uses event data to reduce the latency of data in the UDP  relational store.
+        </p>
+
+        <p>
+          Generally speaking, two strategies are applied to reduce data latency with event data:
+          <ol>
+            <li>Event payload data is used to update the UDP  relational store</li>
+            <li>Events types/actions trigger API calls whose responses contain data used to update the UDP  relational store</li>
+          </ol>
+        </p>
+
+        <p>
+          Below are the Reduced latency processing streams currently supported by the UDP.
+        </p>
+
+        <p>
+          <table class="table">
+            <tr>
+              <th>Application</th>
+              <th>Event type</th>
+              <th>UDP object data</th>
+            </tr>
+            <tr>
+              <td>Canvas Live Events</td>
+              <td>Enrollment updated</td>
+              <td><code>Workflow state</code> and <code>Role</code> updated for <a href="../ucdm/data-dictionary.html#course-section-enrollment">Course section enrollment</a>.</td>
+            </tr>
+            <tr>
+              <td>Canvas Live Events</td>
+              <td>Grade changed</td>
+              <td><code>ScoreValue</code> updated for <a href="../ucdm/data-dictionary.html#learner-activity-result">Learner activity result</a>.</td>
+            </tr>
+            <tr>
+              <td>Canvas Live Events</td>
+              <td>Submission created</td>
+              <td><a href="../ucdm/data-dictionary.html#learner-activity-result">Learner activity result</a> is created.</td>
+            </tr>
+          </table>
+        </p>
+
+
+        <!-- Event stream signatures -->
+        <a name='event-stream-signatures'></a>
+        <h1>3. Event stream signatures</h1>
+        <p>
+          Event stream signatures are strings. The strings uniquely identify a processing stream to which an event was routed. Event stream signatures are returned in the Caliper endpoint's responses.
+        </p>
+
+        <p>
+          Event stream signatures are unique to an Institution and a UDP environment. All institutions are identified by a shortcode equivalent to their top-level web domain (e.g., <code>umich</code> for the University of Michigan). Three environments will be supported in the UDP: "DEV" (for development), "UAT" (for user acceptance testing), and "PROD" (for production).
+        </p>
+
+        <p>
+          <table class="table">
+            <tr>
+              <th>Route signature</th>
+              <th>Processing type</th>
+              <th>Application</th>
+            </tr>
+            <tr>
+              <td><code>STREAM-unizin-&lt;INST&gt;-&lt;INST&gt;-stream-Silver-&lt;ENV&gt;</code></td>
+              <td>Silver tier</td>
+              <td><em>All</em></td>
+            </tr>
+            <tr>
+              <td><code>STREAM-unizin-&lt;INST&gt;-&lt;INST&gt;-stream-GoldCanvasLiveEvents-&lt;ENV&gt;</code></td>
+              <td>Gold tier</td>
+              <td>Canvas Live Events</td>
+            </tr>
+            <tr>
+              <td><code>STREAM-unizin-&lt;INST&gt;-&lt;INST&gt;-stream-GoldEngage-&lt;ENV&gt;</code></td>
+              <td>Gold tier</td>
+              <td>Unizin Engage</td>
+            </tr>
+            <tr>
+              <td><code>STREAM-unizin-&lt;INST&gt;-&lt;INST&gt;-stream-GoldUMichLectureCapture-&lt;ENV&gt;</code></td>
+              <td>Gold tier</td>
+              <td>U-M CAEN Lecture Capture</td>
+            </tr>
+            <tr>
+              <td><code>STREAM-unizin-&lt;INST&gt;-&lt;INST&gt;-stream-RLEnrollmentUpdated-&lt;ENV&gt;</code></td>
+              <td>Reduced latency</td>
+              <td>Canvas Live Events (Enrollment updated)</td>
+            </tr>
+            <tr>
+              <td><code>STREAM-unizin-&lt;INST&gt;-&lt;INST&gt;-stream-RLGradeChanged-&lt;ENV&gt;</code></td>
+              <td>Reduced latency</td>
+              <td>Canvas Live Events (Grade changed)</td>
+            </tr>
+            <tr>
+              <td><code>STREAM-unizin-&lt;INST&gt;-&lt;INST&gt;-stream-RLSubmissionCreated-&lt;ENV&gt;</code></td>
+              <td>Reduced latency</td>
+              <td>Canvas Live Events (Learner activity result created)</td>
+            </tr>
+          </table>
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="content">
+          <p>
+            Questions about the documentation? <a href='mailto:udp@unizin.org'>Contact us</a>.<br>
+            Unizin Data Platform by <a href="http://unizin.org">Unizin, Ltd.</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ///Footer -->
+
+  </body>
+</html>
