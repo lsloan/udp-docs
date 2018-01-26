@@ -12,7 +12,7 @@ Based on version 1 of the SIS Loading Schema, institutions should:
  - Data files are generated and pushed daily to the UDP.
  - The field delimiter is a comma (,)
  - The value quoting character is a double quotes (")
- - The quote escape character is a backslash (\)
+ - The quote escape character is a backslash (\\)
 
 ### File name format
 Your institution will push the files noted above to a dedicated location via SFTP. Please work with the Unizin team to determine your institution's ingress point.
