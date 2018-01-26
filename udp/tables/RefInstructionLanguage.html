@@ -1,0 +1,495 @@
+<!doctype html><html lang="en">  <head>   <title>refinstructionlanguage: definition</title>   <meta charset="utf-8">   <link rel='stylesheet' href='../assets/base.css'> </head><body><a name='top'></a><!-- Navigation --> <div class="container"> <nav class="navbar is-transparent"> <div class="navbar-brand"> <div class="navbar-burger burger" data-target="navbarExampleTransparentExample"> <span></span> <span></span> <span></span> </div> </div> <div id="navbarExampleTransparentExample" class="navbar-menu"> <div class="navbar-start"> <a class="navbar-item" href="../index.html"> Home </a> <div class="navbar-item has-dropdown is-hoverable"> <a class="navbar-link" href="../index.html"> UDP </a> <div class="navbar-dropdown is-boxed"> <a class="navbar-item" href="../udp/access-udp-resources.html"> Accessing UDP resources </a> <hr class="navbar-divider"> <a class="navbar-item" href="../udp/caliper-endpoint.html"> Caliper endpoint </a> <a class="navbar-item" href="../udp/event-processing.html"> Event processing </a> <a class="navbar-item" href="../udp/lrs-event-record.html"> Event record </a> </div> </div> <div class="navbar-item has-dropdown is-hoverable"> <a class="navbar-link" href="../index.html"> UCDM </a> <div class="navbar-dropdown is-boxed"> <a class="navbar-item" href="../ucdm/data-dictionary.html"> Data dictionary </a> <a class="navbar-item" href="../ucdm/relational-schema.html"> Relational schema </a> <a class="navbar-item" href="../ucdm/canvas-to-ucdm.html"> Canvas Data to UCDM </a> <hr class="navbar-divider"> <a class="navbar-item" href="../ucdm/queries-relational-store.html"> Sample Relational Store queries </a> <a class="navbar-item" href="../ucdm/queries-event-store.html"> Sample Learning Record Store queries </a> </div> </div> </div> <div class="navbar-end"> </div> </div> </nav> </div> <!-- /// Navigation --><section class="hero is-primary">  <div class="hero-body">    <div class="container">      <h1 class="title">        <b>refinstructionlanguage</b>       </h1>      <h2 class="subtitle">              </h2>    </div>  </div></section><div class="content"><br><div class="container"><b>Table definition</b><table class='table is-bordered is-hoverable'><thead><tr ><th>Name</th><th>Definition</th><th>Jursidiction</th></tr>
+</thead><tbody><tr ><td>refinstructionlanguageid</td><td>INTEGER</td><td>Common Educational Data Standards</td></tr>
+<tr ><td>description</td><td>CHARACTER VARYING (100)</td><td>Common Educational Data Standards</td></tr>
+<tr ><td>code</td><td>CHARACTER VARYING (50)</td><td>Common Educational Data Standards</td></tr>
+<tr ><td>definition</td><td>CHARACTER VARYING (4000)</td><td>Common Educational Data Standards</td></tr>
+<tr ><td>refjurisdictionid</td><td>INTEGER</td><td>Common Educational Data Standards</td></tr>
+<tr ><td>sortorder</td><td>NUMERIC</td><td>Common Educational Data Standards</td></tr>
+</tbody></table><b>Option set values</b><table class='table is-bordered is-hoverable'><thead><tr ><th>Code</th><th>Description</th><th>Definition</th><th>Jurisdiction</th></tr>
+</thead><tbody><tr ><td><code>aar</code></td><td>Afar</td><td>Afar</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>abk</code></td><td>Abkhazian</td><td>Abkhazian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ace</code></td><td>Achinese</td><td>Achinese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ach</code></td><td>Acoli</td><td>Acoli</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ada</code></td><td>Adangme</td><td>Adangme</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ady</code></td><td>Adyghe; Adygei</td><td>Adyghe; Adygei</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>afa</code></td><td>Afro-Asiatic languages</td><td>Afro-Asiatic languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>afh</code></td><td>Afrihili</td><td>Afrihili</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>afr</code></td><td>Afrikaans</td><td>Afrikaans</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ain</code></td><td>Ainu</td><td>Ainu</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>aka</code></td><td>Akan</td><td>Akan</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>akk</code></td><td>Akkadian</td><td>Akkadian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>alb</code></td><td>Albanian</td><td>Albanian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ale</code></td><td>Aleut</td><td>Aleut</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>alg</code></td><td>Algonquian languages</td><td>Algonquian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>alt</code></td><td>Southern Altai</td><td>Southern Altai</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>amh</code></td><td>Amharic</td><td>Amharic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ang</code></td><td>English</td><td>English</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>anp</code></td><td>Angika</td><td>Angika</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>apa</code></td><td>Apache languages</td><td>Apache languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ara</code></td><td>Arabic</td><td>Arabic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>arc</code></td><td>Official Aramaic (700-300 BCE); Imperial Aramaic (700-300 BCE)</td><td>Official Aramaic (700-300 BCE); Imperial Aramaic (700-300 BCE)</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>arg</code></td><td>Aragonese</td><td>Aragonese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>arm</code></td><td>Armenian</td><td>Armenian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>arn</code></td><td>Mapudungun; Mapuche</td><td>Mapudungun; Mapuche</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>arp</code></td><td>Arapaho</td><td>Arapaho</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>art</code></td><td>Artificial languages</td><td>Artificial languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>arw</code></td><td>Arawak</td><td>Arawak</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>asm</code></td><td>Assamese</td><td>Assamese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ast</code></td><td>Asturian; Bable; Leonese; Asturleonese</td><td>Asturian; Bable; Leonese; Asturleonese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ath</code></td><td>Athapascan languages</td><td>Athapascan languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>aus</code></td><td>Australian languages</td><td>Australian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ava</code></td><td>Avaric</td><td>Avaric</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ave</code></td><td>Avestan</td><td>Avestan</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>awa</code></td><td>Awadhi</td><td>Awadhi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>aym</code></td><td>Aymara</td><td>Aymara</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>aze</code></td><td>Azerbaijani</td><td>Azerbaijani</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bad</code></td><td>Banda languages</td><td>Banda languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bai</code></td><td>Bamileke languages</td><td>Bamileke languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bak</code></td><td>Bashkir</td><td>Bashkir</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bal</code></td><td>Baluchi</td><td>Baluchi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bam</code></td><td>Bambara</td><td>Bambara</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ban</code></td><td>Balinese</td><td>Balinese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>baq</code></td><td>Basque</td><td>Basque</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bas</code></td><td>Basa</td><td>Basa</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bat</code></td><td>Baltic languages</td><td>Baltic languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bej</code></td><td>Beja; Bedawiyet</td><td>Beja; Bedawiyet</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bel</code></td><td>Belarusian</td><td>Belarusian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bem</code></td><td>Bemba</td><td>Bemba</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ben</code></td><td>Bengali</td><td>Bengali</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ber</code></td><td>Berber languages</td><td>Berber languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bho</code></td><td>Bhojpuri</td><td>Bhojpuri</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bih</code></td><td>Bihari languages</td><td>Bihari languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bik</code></td><td>Bikol</td><td>Bikol</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bin</code></td><td>Bini; Edo</td><td>Bini; Edo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bis</code></td><td>Bislama</td><td>Bislama</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bla</code></td><td>Siksika</td><td>Siksika</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bnt</code></td><td>Bantu (Other)</td><td>Bantu (Other)</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bos</code></td><td>Bosnian</td><td>Bosnian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bra</code></td><td>Braj</td><td>Braj</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bre</code></td><td>Breton</td><td>Breton</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>btk</code></td><td>Batak languages</td><td>Batak languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bua</code></td><td>Buriat</td><td>Buriat</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bug</code></td><td>Buginese</td><td>Buginese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bul</code></td><td>Bulgarian</td><td>Bulgarian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>bur</code></td><td>Burmese</td><td>Burmese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>byn</code></td><td>Blin; Bilin</td><td>Blin; Bilin</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cad</code></td><td>Caddo</td><td>Caddo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cai</code></td><td>Central American Indian languages</td><td>Central American Indian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>car</code></td><td>Galibi Carib</td><td>Galibi Carib</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cat</code></td><td>Catalan; Valencian</td><td>Catalan; Valencian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cau</code></td><td>Caucasian languages</td><td>Caucasian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ceb</code></td><td>Cebuano</td><td>Cebuano</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cel</code></td><td>Celtic languages</td><td>Celtic languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cha</code></td><td>Chamorro</td><td>Chamorro</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>chb</code></td><td>Chibcha</td><td>Chibcha</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>che</code></td><td>Chechen</td><td>Chechen</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>chg</code></td><td>Chagatai</td><td>Chagatai</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>chi</code></td><td>Chinese</td><td>Chinese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>chk</code></td><td>Chuukese</td><td>Chuukese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>chm</code></td><td>Mari</td><td>Mari</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>chn</code></td><td>Chinook jargon</td><td>Chinook jargon</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cho</code></td><td>Choctaw</td><td>Choctaw</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>chp</code></td><td>Chipewyan; Dene Suline</td><td>Chipewyan; Dene Suline</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>chr</code></td><td>Cherokee</td><td>Cherokee</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>chu</code></td><td>Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic</td><td>Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>chv</code></td><td>Chuvash</td><td>Chuvash</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>chy</code></td><td>Cheyenne</td><td>Cheyenne</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cmc</code></td><td>Chamic languages</td><td>Chamic languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cop</code></td><td>Coptic</td><td>Coptic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cor</code></td><td>Cornish</td><td>Cornish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cos</code></td><td>Corsican</td><td>Corsican</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cpe</code></td><td>Creoles and pidgins</td><td>Creoles and pidgins</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cpf</code></td><td>Creoles and pidgins</td><td>Creoles and pidgins</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cpp</code></td><td>Creoles and pidgins</td><td>Creoles and pidgins</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cre</code></td><td>Cree</td><td>Cree</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>crh</code></td><td>Crimean Tatar; Crimean Turkish</td><td>Crimean Tatar; Crimean Turkish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>crp</code></td><td>Creoles and pidgins </td><td>Creoles and pidgins </td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>csb</code></td><td>Kashubian</td><td>Kashubian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cus</code></td><td>Cushitic languages</td><td>Cushitic languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>cze</code></td><td>Czech</td><td>Czech</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>dak</code></td><td>Dakota</td><td>Dakota</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>dan</code></td><td>Danish</td><td>Danish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>dar</code></td><td>Dargwa</td><td>Dargwa</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>day</code></td><td>Land Dayak languages</td><td>Land Dayak languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>del</code></td><td>Delaware</td><td>Delaware</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>den</code></td><td>Slave (Athapascan)</td><td>Slave (Athapascan)</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>dgr</code></td><td>Dogrib</td><td>Dogrib</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>din</code></td><td>Dinka</td><td>Dinka</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>div</code></td><td>Divehi; Dhivehi; Maldivian</td><td>Divehi; Dhivehi; Maldivian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>doi</code></td><td>Dogri</td><td>Dogri</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>dra</code></td><td>Dravidian languages</td><td>Dravidian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>dsb</code></td><td>Lower Sorbian</td><td>Lower Sorbian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>dua</code></td><td>Duala</td><td>Duala</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>dum</code></td><td>Dutch</td><td>Dutch</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>dut</code></td><td>Dutch; Flemish</td><td>Dutch; Flemish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>dyu</code></td><td>Dyula</td><td>Dyula</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>dzo</code></td><td>Dzongkha</td><td>Dzongkha</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>efi</code></td><td>Efik</td><td>Efik</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>egy</code></td><td>Egyptian (Ancient)</td><td>Egyptian (Ancient)</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>eka</code></td><td>Ekajuk</td><td>Ekajuk</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>elx</code></td><td>Elamite</td><td>Elamite</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>eng</code></td><td>English</td><td>English</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>enm</code></td><td>English</td><td>English</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>epo</code></td><td>Esperanto</td><td>Esperanto</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>est</code></td><td>Estonian</td><td>Estonian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ewe</code></td><td>Ewe</td><td>Ewe</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ewo</code></td><td>Ewondo</td><td>Ewondo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>fan</code></td><td>Fang</td><td>Fang</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>fao</code></td><td>Faroese</td><td>Faroese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>fat</code></td><td>Fanti</td><td>Fanti</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>fij</code></td><td>Fijian</td><td>Fijian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>fil</code></td><td>Filipino; Pilipino</td><td>Filipino; Pilipino</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>fin</code></td><td>Finnish</td><td>Finnish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>fiu</code></td><td>Finno-Ugrian languages</td><td>Finno-Ugrian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>fon</code></td><td>Fon</td><td>Fon</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>fre</code></td><td>French</td><td>French</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>frm</code></td><td>French</td><td>French</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>fro</code></td><td>French</td><td>French</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>frr</code></td><td>Northern Frisian</td><td>Northern Frisian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>frs</code></td><td>Eastern Frisian</td><td>Eastern Frisian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>fry</code></td><td>Western Frisian</td><td>Western Frisian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ful</code></td><td>Fulah</td><td>Fulah</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>fur</code></td><td>Friulian</td><td>Friulian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gaa</code></td><td>Ga</td><td>Ga</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gay</code></td><td>Gayo</td><td>Gayo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gba</code></td><td>Gbaya</td><td>Gbaya</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gem</code></td><td>Germanic languages</td><td>Germanic languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>geo</code></td><td>Georgian</td><td>Georgian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ger</code></td><td>German</td><td>German</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gez</code></td><td>Geez</td><td>Geez</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gil</code></td><td>Gilbertese</td><td>Gilbertese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gla</code></td><td>Gaelic; Scottish Gaelic</td><td>Gaelic; Scottish Gaelic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gle</code></td><td>Irish</td><td>Irish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>glg</code></td><td>Galician</td><td>Galician</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>glv</code></td><td>Manx</td><td>Manx</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gmh</code></td><td>German</td><td>German</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>goh</code></td><td>German</td><td>German</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gon</code></td><td>Gondi</td><td>Gondi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gor</code></td><td>Gorontalo</td><td>Gorontalo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>got</code></td><td>Gothic</td><td>Gothic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>grb</code></td><td>Grebo</td><td>Grebo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>grc</code></td><td>Greek</td><td>Greek</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gre</code></td><td>Greek</td><td>Greek</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>grn</code></td><td>Guarani</td><td>Guarani</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gsw</code></td><td>Swiss German; Alemannic; Alsatian</td><td>Swiss German; Alemannic; Alsatian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>guj</code></td><td>Gujarati</td><td>Gujarati</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>gwi</code></td><td>Gwich'in</td><td>Gwich'in</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>hai</code></td><td>Haida</td><td>Haida</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>hat</code></td><td>Haitian; Haitian Creole</td><td>Haitian; Haitian Creole</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>hau</code></td><td>Hausa</td><td>Hausa</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>haw</code></td><td>Hawaiian</td><td>Hawaiian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>heb</code></td><td>Hebrew</td><td>Hebrew</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>her</code></td><td>Herero</td><td>Herero</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>hil</code></td><td>Hiligaynon</td><td>Hiligaynon</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>him</code></td><td>Himachali languages; Western Pahari languages</td><td>Himachali languages; Western Pahari languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>hin</code></td><td>Hindi</td><td>Hindi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>hit</code></td><td>Hittite</td><td>Hittite</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>hmn</code></td><td>Hmong; Mong</td><td>Hmong; Mong</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>hmo</code></td><td>Hiri Motu</td><td>Hiri Motu</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>hrv</code></td><td>Croatian</td><td>Croatian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>hsb</code></td><td>Upper Sorbian</td><td>Upper Sorbian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>hun</code></td><td>Hungarian</td><td>Hungarian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>hup</code></td><td>Hupa</td><td>Hupa</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>iba</code></td><td>Iban</td><td>Iban</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ibo</code></td><td>Igbo</td><td>Igbo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ice</code></td><td>Icelandic</td><td>Icelandic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ido</code></td><td>Ido</td><td>Ido</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>iii</code></td><td>Sichuan Yi; Nuosu</td><td>Sichuan Yi; Nuosu</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ijo</code></td><td>Ijo languages</td><td>Ijo languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>iku</code></td><td>Inuktitut</td><td>Inuktitut</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ile</code></td><td>Interlingue; Occidental</td><td>Interlingue; Occidental</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ilo</code></td><td>Iloko</td><td>Iloko</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ina</code></td><td>Interlingua (International Auxiliary Language Association)</td><td>Interlingua (International Auxiliary Language Association)</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>inc</code></td><td>Indic languages</td><td>Indic languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ind</code></td><td>Indonesian</td><td>Indonesian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ine</code></td><td>Indo-European languages</td><td>Indo-European languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>inh</code></td><td>Ingush</td><td>Ingush</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ipk</code></td><td>Inupiaq</td><td>Inupiaq</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ira</code></td><td>Iranian languages</td><td>Iranian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>iro</code></td><td>Iroquoian languages</td><td>Iroquoian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ita</code></td><td>Italian</td><td>Italian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>jav</code></td><td>Javanese</td><td>Javanese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>jbo</code></td><td>Lojban</td><td>Lojban</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>jpn</code></td><td>Japanese</td><td>Japanese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>jpr</code></td><td>Judeo-Persian</td><td>Judeo-Persian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>jrb</code></td><td>Judeo-Arabic</td><td>Judeo-Arabic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kaa</code></td><td>Kara-Kalpak</td><td>Kara-Kalpak</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kab</code></td><td>Kabyle</td><td>Kabyle</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kac</code></td><td>Kachin; Jingpho</td><td>Kachin; Jingpho</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kal</code></td><td>Kalaallisut; Greenlandic</td><td>Kalaallisut; Greenlandic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kam</code></td><td>Kamba</td><td>Kamba</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kan</code></td><td>Kannada</td><td>Kannada</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kar</code></td><td>Karen languages</td><td>Karen languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kas</code></td><td>Kashmiri</td><td>Kashmiri</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kau</code></td><td>Kanuri</td><td>Kanuri</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kaw</code></td><td>Kawi</td><td>Kawi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kaz</code></td><td>Kazakh</td><td>Kazakh</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kbd</code></td><td>Kabardian</td><td>Kabardian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kha</code></td><td>Khasi</td><td>Khasi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>khi</code></td><td>Khoisan languages</td><td>Khoisan languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>khm</code></td><td>Central Khmer</td><td>Central Khmer</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kho</code></td><td>Khotanese; Sakan</td><td>Khotanese; Sakan</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kik</code></td><td>Kikuyu; Gikuyu</td><td>Kikuyu; Gikuyu</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kin</code></td><td>Kinyarwanda</td><td>Kinyarwanda</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kir</code></td><td>Kirghiz; Kyrgyz</td><td>Kirghiz; Kyrgyz</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kmb</code></td><td>Kimbundu</td><td>Kimbundu</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kok</code></td><td>Konkani</td><td>Konkani</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kom</code></td><td>Komi</td><td>Komi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kon</code></td><td>Kongo</td><td>Kongo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kor</code></td><td>Korean</td><td>Korean</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kos</code></td><td>Kosraean</td><td>Kosraean</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kpe</code></td><td>Kpelle</td><td>Kpelle</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>krc</code></td><td>Karachay-Balkar</td><td>Karachay-Balkar</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>krl</code></td><td>Karelian</td><td>Karelian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kro</code></td><td>Kru languages</td><td>Kru languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kru</code></td><td>Kurukh</td><td>Kurukh</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kua</code></td><td>Kuanyama; Kwanyama</td><td>Kuanyama; Kwanyama</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kum</code></td><td>Kumyk</td><td>Kumyk</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kur</code></td><td>Kurdish</td><td>Kurdish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>kut</code></td><td>Kutenai</td><td>Kutenai</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lad</code></td><td>Ladino</td><td>Ladino</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lah</code></td><td>Lahnda</td><td>Lahnda</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lam</code></td><td>Lamba</td><td>Lamba</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lao</code></td><td>Lao</td><td>Lao</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lat</code></td><td>Latin</td><td>Latin</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lav</code></td><td>Latvian</td><td>Latvian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lez</code></td><td>Lezghian</td><td>Lezghian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lim</code></td><td>Limburgan; Limburger; Limburgish</td><td>Limburgan; Limburger; Limburgish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lin</code></td><td>Lingala</td><td>Lingala</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lit</code></td><td>Lithuanian</td><td>Lithuanian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lol</code></td><td>Mongo</td><td>Mongo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>loz</code></td><td>Lozi</td><td>Lozi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ltz</code></td><td>Luxembourgish; Letzeburgesch</td><td>Luxembourgish; Letzeburgesch</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lua</code></td><td>Luba-Lulua</td><td>Luba-Lulua</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lub</code></td><td>Luba-Katanga</td><td>Luba-Katanga</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lug</code></td><td>Ganda</td><td>Ganda</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lui</code></td><td>Luiseno</td><td>Luiseno</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lun</code></td><td>Lunda</td><td>Lunda</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>luo</code></td><td>Luo (Kenya and Tanzania)</td><td>Luo (Kenya and Tanzania)</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>lus</code></td><td>Lushai</td><td>Lushai</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mac</code></td><td>Macedonian</td><td>Macedonian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mad</code></td><td>Madurese</td><td>Madurese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mag</code></td><td>Magahi</td><td>Magahi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mah</code></td><td>Marshallese</td><td>Marshallese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mai</code></td><td>Maithili</td><td>Maithili</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mak</code></td><td>Makasar</td><td>Makasar</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mal</code></td><td>Malayalam</td><td>Malayalam</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>man</code></td><td>Mandingo</td><td>Mandingo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mao</code></td><td>Maori</td><td>Maori</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>map</code></td><td>Austronesian languages</td><td>Austronesian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mar</code></td><td>Marathi</td><td>Marathi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mas</code></td><td>Masai</td><td>Masai</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>may</code></td><td>Malay</td><td>Malay</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mdf</code></td><td>Moksha</td><td>Moksha</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mdr</code></td><td>Mandar</td><td>Mandar</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>men</code></td><td>Mende</td><td>Mende</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mga</code></td><td>Irish</td><td>Irish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mic</code></td><td>Mi'kmaq; Micmac</td><td>Mi'kmaq; Micmac</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>min</code></td><td>Minangkabau</td><td>Minangkabau</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mis</code></td><td>Uncoded languages</td><td>Uncoded languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mkh</code></td><td>Mon-Khmer languages</td><td>Mon-Khmer languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mlg</code></td><td>Malagasy</td><td>Malagasy</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mlt</code></td><td>Maltese</td><td>Maltese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mnc</code></td><td>Manchu</td><td>Manchu</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mni</code></td><td>Manipuri</td><td>Manipuri</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mno</code></td><td>Manobo languages</td><td>Manobo languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>moh</code></td><td>Mohawk</td><td>Mohawk</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mon</code></td><td>Mongolian</td><td>Mongolian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mos</code></td><td>Mossi</td><td>Mossi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mul</code></td><td>Multiple languages</td><td>Multiple languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mun</code></td><td>Munda languages</td><td>Munda languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mus</code></td><td>Creek</td><td>Creek</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mwl</code></td><td>Mirandese</td><td>Mirandese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>mwr</code></td><td>Marwari</td><td>Marwari</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>myn</code></td><td>Mayan languages</td><td>Mayan languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>myv</code></td><td>Erzya</td><td>Erzya</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nah</code></td><td>Nahuatl languages</td><td>Nahuatl languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nai</code></td><td>North American Indian languages</td><td>North American Indian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nap</code></td><td>Neapolitan</td><td>Neapolitan</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nau</code></td><td>Nauru</td><td>Nauru</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nav</code></td><td>Navajo; Navaho</td><td>Navajo; Navaho</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nbl</code></td><td>Ndebele</td><td>Ndebele</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nde</code></td><td>Ndebele</td><td>Ndebele</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ndo</code></td><td>Ndonga</td><td>Ndonga</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nds</code></td><td>Low German; Low Saxon; German</td><td>Low German; Low Saxon; German</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nep</code></td><td>Nepali</td><td>Nepali</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>new</code></td><td>Nepal Bhasa; Newari</td><td>Nepal Bhasa; Newari</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nia</code></td><td>Nias</td><td>Nias</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nic</code></td><td>Niger-Kordofanian languages</td><td>Niger-Kordofanian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>niu</code></td><td>Niuean</td><td>Niuean</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nno</code></td><td>Norwegian Nynorsk; Nynorsk</td><td>Norwegian Nynorsk; Nynorsk</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nob</code></td><td>Bokmål</td><td>Bokmål</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nog</code></td><td>Nogai</td><td>Nogai</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>non</code></td><td>Norse</td><td>Norse</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nor</code></td><td>Norwegian</td><td>Norwegian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nqo</code></td><td>N'Ko</td><td>N'Ko</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nso</code></td><td>Pedi; Sepedi; Northern Sotho</td><td>Pedi; Sepedi; Northern Sotho</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nub</code></td><td>Nubian languages</td><td>Nubian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nwc</code></td><td>Classical Newari; Old Newari; Classical Nepal Bhasa</td><td>Classical Newari; Old Newari; Classical Nepal Bhasa</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nya</code></td><td>Chichewa; Chewa; Nyanja</td><td>Chichewa; Chewa; Nyanja</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nym</code></td><td>Nyamwezi</td><td>Nyamwezi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nyn</code></td><td>Nyankole</td><td>Nyankole</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nyo</code></td><td>Nyoro</td><td>Nyoro</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>nzi</code></td><td>Nzima</td><td>Nzima</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>oci</code></td><td>Occitan (post 1500); Provençal</td><td>Occitan (post 1500); Provençal</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>oji</code></td><td>Ojibwa</td><td>Ojibwa</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ori</code></td><td>Oriya</td><td>Oriya</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>orm</code></td><td>Oromo</td><td>Oromo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>osa</code></td><td>Osage</td><td>Osage</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>oss</code></td><td>Ossetian; Ossetic</td><td>Ossetian; Ossetic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ota</code></td><td>Turkish</td><td>Turkish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>oto</code></td><td>Otomian languages</td><td>Otomian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>paa</code></td><td>Papuan languages</td><td>Papuan languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>pag</code></td><td>Pangasinan</td><td>Pangasinan</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>pal</code></td><td>Pahlavi</td><td>Pahlavi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>pam</code></td><td>Pampanga; Kapampangan</td><td>Pampanga; Kapampangan</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>pan</code></td><td>Panjabi; Punjabi</td><td>Panjabi; Punjabi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>pap</code></td><td>Papiamento</td><td>Papiamento</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>pau</code></td><td>Palauan</td><td>Palauan</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>peo</code></td><td>Persian</td><td>Persian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>per</code></td><td>Persian</td><td>Persian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>phi</code></td><td>Philippine languages</td><td>Philippine languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>phn</code></td><td>Phoenician</td><td>Phoenician</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>pli</code></td><td>Pali</td><td>Pali</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>pol</code></td><td>Polish</td><td>Polish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>pon</code></td><td>Pohnpeian</td><td>Pohnpeian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>por</code></td><td>Portuguese</td><td>Portuguese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>pra</code></td><td>Prakrit languages</td><td>Prakrit languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>pro</code></td><td>Provençal</td><td>Provençal</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>pus</code></td><td>Pushto; Pashto</td><td>Pushto; Pashto</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>qaa-qtz</code></td><td>Reserved for local use</td><td>Reserved for local use</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>que</code></td><td>Quechua</td><td>Quechua</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>raj</code></td><td>Rajasthani</td><td>Rajasthani</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>rap</code></td><td>Rapanui</td><td>Rapanui</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>rar</code></td><td>Rarotongan; Cook Islands Maori</td><td>Rarotongan; Cook Islands Maori</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>roa</code></td><td>Romance languages</td><td>Romance languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>roh</code></td><td>Romansh</td><td>Romansh</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>rom</code></td><td>Romany</td><td>Romany</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>rum</code></td><td>Romanian; Moldavian; Moldovan</td><td>Romanian; Moldavian; Moldovan</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>run</code></td><td>Rundi</td><td>Rundi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>rup</code></td><td>Aromanian; Arumanian; Macedo-Romanian</td><td>Aromanian; Arumanian; Macedo-Romanian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>rus</code></td><td>Russian</td><td>Russian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sad</code></td><td>Sandawe</td><td>Sandawe</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sag</code></td><td>Sango</td><td>Sango</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sah</code></td><td>Yakut</td><td>Yakut</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sai</code></td><td>South American Indian (Other)</td><td>South American Indian (Other)</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sal</code></td><td>Salishan languages</td><td>Salishan languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sam</code></td><td>Samaritan Aramaic</td><td>Samaritan Aramaic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>san</code></td><td>Sanskrit</td><td>Sanskrit</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sas</code></td><td>Sasak</td><td>Sasak</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sat</code></td><td>Santali</td><td>Santali</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>scn</code></td><td>Sicilian</td><td>Sicilian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sco</code></td><td>Scots</td><td>Scots</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sel</code></td><td>Selkup</td><td>Selkup</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sem</code></td><td>Semitic languages</td><td>Semitic languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sga</code></td><td>Irish</td><td>Irish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sgn</code></td><td>Sign Languages</td><td>Sign Languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>shn</code></td><td>Shan</td><td>Shan</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sid</code></td><td>Sidamo</td><td>Sidamo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sin</code></td><td>Sinhala; Sinhalese</td><td>Sinhala; Sinhalese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sio</code></td><td>Siouan languages</td><td>Siouan languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sit</code></td><td>Sino-Tibetan languages</td><td>Sino-Tibetan languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sla</code></td><td>Slavic languages</td><td>Slavic languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>slo</code></td><td>Slovak</td><td>Slovak</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>slv</code></td><td>Slovenian</td><td>Slovenian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sma</code></td><td>Southern Sami</td><td>Southern Sami</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sme</code></td><td>Northern Sami</td><td>Northern Sami</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>smi</code></td><td>Sami languages</td><td>Sami languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>smj</code></td><td>Lule Sami</td><td>Lule Sami</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>smn</code></td><td>Inari Sami</td><td>Inari Sami</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>smo</code></td><td>Samoan</td><td>Samoan</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sms</code></td><td>Skolt Sami</td><td>Skolt Sami</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sna</code></td><td>Shona</td><td>Shona</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>snd</code></td><td>Sindhi</td><td>Sindhi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>snk</code></td><td>Soninke</td><td>Soninke</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sog</code></td><td>Sogdian</td><td>Sogdian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>som</code></td><td>Somali</td><td>Somali</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>son</code></td><td>Songhai languages</td><td>Songhai languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sot</code></td><td>Sotho</td><td>Sotho</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>spa</code></td><td>Spanish; Castilian</td><td>Spanish; Castilian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>srd</code></td><td>Sardinian</td><td>Sardinian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>srn</code></td><td>Sranan Tongo</td><td>Sranan Tongo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>srp</code></td><td>Serbian</td><td>Serbian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>srr</code></td><td>Serer</td><td>Serer</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ssa</code></td><td>Nilo-Saharan languages</td><td>Nilo-Saharan languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ssw</code></td><td>Swati</td><td>Swati</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>suk</code></td><td>Sukuma</td><td>Sukuma</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sun</code></td><td>Sundanese</td><td>Sundanese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sus</code></td><td>Susu</td><td>Susu</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>sux</code></td><td>Sumerian</td><td>Sumerian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>swa</code></td><td>Swahili</td><td>Swahili</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>swe</code></td><td>Swedish</td><td>Swedish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>syc</code></td><td>Classical Syriac</td><td>Classical Syriac</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>syr</code></td><td>Syriac</td><td>Syriac</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tah</code></td><td>Tahitian</td><td>Tahitian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tai</code></td><td>Tai languages</td><td>Tai languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tam</code></td><td>Tamil</td><td>Tamil</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tat</code></td><td>Tatar</td><td>Tatar</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tel</code></td><td>Telugu</td><td>Telugu</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tem</code></td><td>Timne</td><td>Timne</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ter</code></td><td>Tereno</td><td>Tereno</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tet</code></td><td>Tetum</td><td>Tetum</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tgk</code></td><td>Tajik</td><td>Tajik</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tgl</code></td><td>Tagalog</td><td>Tagalog</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tha</code></td><td>Thai</td><td>Thai</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tib</code></td><td>Tibetan</td><td>Tibetan</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tig</code></td><td>Tigre</td><td>Tigre</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tir</code></td><td>Tigrinya</td><td>Tigrinya</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tiv</code></td><td>Tiv</td><td>Tiv</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tkl</code></td><td>Tokelau</td><td>Tokelau</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tlh</code></td><td>Klingon; tlhIngan-Hol</td><td>Klingon; tlhIngan-Hol</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tli</code></td><td>Tlingit</td><td>Tlingit</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tmh</code></td><td>Tamashek</td><td>Tamashek</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tog</code></td><td>Tonga (Nyasa)</td><td>Tonga (Nyasa)</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ton</code></td><td>Tonga (Tonga Islands)</td><td>Tonga (Tonga Islands)</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tpi</code></td><td>Tok Pisin</td><td>Tok Pisin</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tsi</code></td><td>Tsimshian</td><td>Tsimshian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tsn</code></td><td>Tswana</td><td>Tswana</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tso</code></td><td>Tsonga</td><td>Tsonga</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tuk</code></td><td>Turkmen</td><td>Turkmen</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tum</code></td><td>Tumbuka</td><td>Tumbuka</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tup</code></td><td>Tupi languages</td><td>Tupi languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tur</code></td><td>Turkish</td><td>Turkish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tut</code></td><td>Altaic languages</td><td>Altaic languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tvl</code></td><td>Tuvalu</td><td>Tuvalu</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>twi</code></td><td>Twi</td><td>Twi</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>tyv</code></td><td>Tuvinian</td><td>Tuvinian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>udm</code></td><td>Udmurt</td><td>Udmurt</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>uga</code></td><td>Ugaritic</td><td>Ugaritic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>uig</code></td><td>Uighur; Uyghur</td><td>Uighur; Uyghur</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ukr</code></td><td>Ukrainian</td><td>Ukrainian</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>umb</code></td><td>Umbundu</td><td>Umbundu</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>und</code></td><td>Undetermined</td><td>Undetermined</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>urd</code></td><td>Urdu</td><td>Urdu</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>uzb</code></td><td>Uzbek</td><td>Uzbek</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>vai</code></td><td>Vai</td><td>Vai</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ven</code></td><td>Venda</td><td>Venda</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>vie</code></td><td>Vietnamese</td><td>Vietnamese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>vol</code></td><td>Volapük</td><td>Volapük</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>vot</code></td><td>Votic</td><td>Votic</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>wak</code></td><td>Wakashan languages</td><td>Wakashan languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>wal</code></td><td>Walamo</td><td>Walamo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>war</code></td><td>Waray</td><td>Waray</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>was</code></td><td>Washo</td><td>Washo</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>wel</code></td><td>Welsh</td><td>Welsh</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>wen</code></td><td>Sorbian languages</td><td>Sorbian languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>wln</code></td><td>Walloon</td><td>Walloon</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>wol</code></td><td>Wolof</td><td>Wolof</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>xal</code></td><td>Kalmyk; Oirat</td><td>Kalmyk; Oirat</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>xho</code></td><td>Xhosa</td><td>Xhosa</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>yao</code></td><td>Yao</td><td>Yao</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>yap</code></td><td>Yapese</td><td>Yapese</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>yid</code></td><td>Yiddish</td><td>Yiddish</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>yor</code></td><td>Yoruba</td><td>Yoruba</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>ypk</code></td><td>Yupik languages</td><td>Yupik languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>zap</code></td><td>Zapotec</td><td>Zapotec</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>zbl</code></td><td>Blissymbols; Blissymbolics; Bliss</td><td>Blissymbols; Blissymbolics; Bliss</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>zen</code></td><td>Zenaga</td><td>Zenaga</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>zgh</code></td><td>Standard Moroccan Tamazight</td><td>Standard Moroccan Tamazight</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>zha</code></td><td>Zhuang; Chuang</td><td>Zhuang; Chuang</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>znd</code></td><td>Zande languages</td><td>Zande languages</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>zul</code></td><td>Zulu</td><td>Zulu</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>zun</code></td><td>Zuni</td><td>Zuni</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>zxx</code></td><td>No linguistic content; Not applicable</td><td>No linguistic content; Not applicable</td><td>Integrated Postsecondary Education Data System</td></tr>
+<tr ><td><code>zza</code></td><td>Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki</td><td>Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki</td><td>Integrated Postsecondary Education Data System</td></tr>
+</tbody></table><br><br><br><br></div></div><!-- Footer --><footer class="footer"> <div class="container"> <div class="content"> <p> Questions about the documentation? <a href='mailto:udp@unizin.org'>Contact us</a>.<br> Unizin Data Platform by <a href="http://unizin.org">Unizin, Ltd.</a> </p> </div> </div></footer><!-- ///Footer --></body></html>

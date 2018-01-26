@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Unizin Data Platform: Access resources</title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='../assets/base.css'>
+  </head>
+
+  <body>
+    <a name='top'></a>
+
+    <!-- Navigation -->
+    <div class="container">
+      <nav class="navbar is-transparent">
+        <div class="navbar-brand">
+          <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="../index.html">
+              Home
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link" href="../index.html">
+                UDP
+              </a>
+              <div class="navbar-dropdown is-boxed">
+                <a class="navbar-item" href="../udp/access-udp-resources.html">
+                  Accessing UDP resources
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item" href="../udp/caliper-endpoint.html">
+                  Caliper endpoint
+                </a>
+                <a class="navbar-item" href="../udp/event-processing.html">
+                  Event processing
+                </a>
+                <a class="navbar-item" href="../udp/lrs-event-record.html">
+                  Event record
+                </a>
+              </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link" href="../index.html">
+                UCDM
+              </a>
+              <div class="navbar-dropdown is-boxed">
+                <a class="navbar-item" href="../ucdm/data-dictionary.html">
+                  Data dictionary
+                </a>
+                <a class="navbar-item" href="../ucdm/relational-schema.html">
+                  Relational schema
+                </a>
+                <a class="navbar-item" href="../ucdm/canvas-to-ucdm.html">
+                  Canvas Data to UCDM
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item" href="../ucdm/queries-relational-store.html">
+                  Sample Relational Store queries
+                </a>
+                <a class="navbar-item" href="../ucdm/queries-event-store.html">
+                  Sample Learning Record Store queries
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="navbar-end">
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- /// Navigation -->
+
+    <!-- Section header -->
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Accessing UDP Resources</h1>
+          <h2 class="subtitle">Unizin Data Platform</h2>
+        </div>
+      </div>
+    </section>
+    <!-- /// Section header -->
+
+    <div class="content">
+      <br>
+      <div class="container">
+
+        <!-- Overview -->
+        <h1>Overview</h1>
+
+        <p>
+          <strong>Note:</strong><em> the Unizin Data Platform implementation is currently in an engineering "hardening" phase. We are migrating from a proof-of-concept implementation to a production-ready implementation of the UDP's ingestion capabilities. During this period, access to UDP resources is limited and focused on validation of the UDP's ingestion capabilities.</em>
+        </p>
+
+        <p>
+          Access to UDP resources is presently authenticated through <a href="https://gsuite.google.com/">GSuite accounts</a> managed by Unizin. You may request as many distinct GSuite accounts as you need to facilitate validation of data ingestion.
+        </p>
+
+
+        <!-- UDP Stores -->
+        <h1>UDP Stores</h1>
+
+        <p>
+          Two key UDP resources can be accessed by Institutions at present:
+          <ol>
+            <li><strong>UDP Relational store</strong>. This relational data warehouse store captures object data from the teaching and learning ecosystem.. All data in the relational store is modeled in the Unizin Common Data Model. Furthermore, all data in the relational store unifies the representation of objects from across the landscape of teaching and learning tools.</li>
+            <li><strong>UDP Learning record store</strong>. The UDP Learning Record Store is a data lake of event data from across the teaching and learning tool ecosystem. Data in the Learning record store is modeled in the <a href="lrs-event-record.html">event record schema</a>, which aligns with the Unizin Common Data Model. The UDP Learning Record Store is implemented in <a href="https://cloud.google.com/bigquery/">Google Big Query</a>.</li>
+          </ol>
+        </p>
+
+
+        <!-- UDP Relational store -->
+        <h1>UDP Relational store</h1>
+
+        <p>
+          The UDP Relational warehouse store is implemented in <a href="https://cloud.google.com/sql/docs/postgres/">Postgres inside Google Cloud SQL</a>. The are various methods of <a href="https://cloud.google.com/sql/docs/postgres/how-to#connecting-to-instances">connecting to Postgres in Google Clould SQL</a>, most of which are supported by the UDP and your G Suite account.
+        </p>
+
+        <p>
+          <table class="table">
+            <tr>
+              <th style="width: 200px">Configuration</th>
+              <th style="width: 200px"></th>
+              <th>&nbsp;</th>
+            </tr>
+
+            <tr>
+              <td>Database name</td>
+              <td><code>unizin</code></td>
+              <td>The <a href="../ucdm/relational-schema.html">UCDM relational schema</a> is applied to this database. Included in the relational schema are the UCDM data tables, the UCDM option set tables, and a tenant's UDP catalog tables.</td>
+            </tr>
+
+            <tr>
+              <td>Default IAM role</td>
+              <td>
+                <a href="https://cloud.google.com/iam/docs/understanding-roles#sql_name_short_roles"><code>cloudsql.viewer</code></a>
+              </td>
+              <td>
+                Provides read-only access to Cloud SQL using an <a href="https://cloud.google.com/iam/docs/understanding-roles">IAM role</a> native to the Google Clould Platform.
+              </td>
+            </tr>
+          </table>
+        </p>
+
+        <p>
+          To conduct data validation, institutions will connect to their UDP relational store via a command line tool (e.g., <code>psql</code>) or using a standard JDBC/ODBC-compliant SQL client (e.g., <a href="http://www.sql-workbench.net/">SQL Workbench</a>).
+        </p>
+
+
+        <!-- UDP Learning record store -->
+        <h1>UDP Learning record store</h1>
+        <p>
+          The UDP's Learning record store is implemented in <a href="https://cloud.google.com/bigquery/docs">Google Big Query</a>. There are a few different methods of <a href="https://cloud.google.com/bigquery/docs/interacting-with-bigquery">interacting with Google Big Query</a>. At present, Unizin supports interacting with Google Big Query via the Big Query <a href="https://cloud.google.com/bigquery/bq-command-line-tool">command line tool</a>, the <a href="https://cloud.google.com/bigquery/docs/reference/rest/v2/">REST API</a> and <a href="https://cloud.google.com/bigquery/docs/reference/libraries">client libraries</a>.
+        </p>
+        <p>
+          <table class="table">
+            <tr>
+              <th style="width: 200px">Configuration</th>
+              <th style="width: 200px"></th>
+              <th>&nbsp;</th>
+            </tr>
+
+            <tr>
+              <td>Dataset name</td>
+              <td><code>learning_datasets</code></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>Table name</td>
+              <td><code>enriched_events</code></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>Default IAM role</td>
+              <td>
+                <a href="https://cloud.google.com/iam/docs/understanding-roles#bigquery_name_short_roles"><code>bigquery.user</a>
+              </td>
+              <td>
+                <p>
+                  Provides access with an <a href="https://cloud.google.com/iam/docs/understanding-roles">IAM role</a> native to the Google Clould Platform.
+                </p>
+                <p>
+                  Provides permissions to run jobs, including queries, within the project. The user role can enumerate their own jobs, cancel their own jobs, and enumerate datasets within a project. Additionally, allows the creation of new datasets within the project; the creator is granted the <code>bigquery.dataOwner</code> role for these new datasets.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="content">
+          <p>
+            Questions about the documentation? <a href='mailto:udp@unizin.org'>Contact us</a>.<br>
+            Unizin Data Platform by <a href="http://unizin.org">Unizin, Ltd.</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ///Footer -->
+
+  </body>
+</html>
